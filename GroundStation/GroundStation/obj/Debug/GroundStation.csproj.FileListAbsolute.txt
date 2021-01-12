@@ -1,0 +1,15 @@
+C:\Users\LENOVO\Documents\GitHub\GRocket20\GroundStation\GroundStation\bin\Debug\GroundStation.exe.config
+C:\Users\LENOVO\Documents\GitHub\GRocket20\GroundStation\GroundStation\bin\Debug\GroundStation.exe
+C:\Users\LENOVO\Documents\GitHub\GRocket20\GroundStation\GroundStation\bin\Debug\GroundStation.pdb
+C:\Users\LENOVO\Documents\GitHub\GRocket20\GroundStation\GroundStation\obj\Debug\GroundStation.csprojAssemblyReference.cache
+C:\Users\LENOVO\Documents\GitHub\GRocket20\GroundStation\GroundStation\obj\Debug\MainWindow.g.cs
+C:\Users\LENOVO\Documents\GitHub\GRocket20\GroundStation\GroundStation\obj\Debug\App.g.cs
+C:\Users\LENOVO\Documents\GitHub\GRocket20\GroundStation\GroundStation\obj\Debug\GroundStation_MarkupCompile.cache
+C:\Users\LENOVO\Documents\GitHub\GRocket20\GroundStation\GroundStation\obj\Debug\GroundStation_MarkupCompile.lref
+C:\Users\LENOVO\Documents\GitHub\GRocket20\GroundStation\GroundStation\obj\Debug\MainWindow.baml
+C:\Users\LENOVO\Documents\GitHub\GRocket20\GroundStation\GroundStation\obj\Debug\GroundStation.g.resources
+C:\Users\LENOVO\Documents\GitHub\GRocket20\GroundStation\GroundStation\obj\Debug\GroundStation.Properties.Resources.resources
+C:\Users\LENOVO\Documents\GitHub\GRocket20\GroundStation\GroundStation\obj\Debug\GroundStation.csproj.GenerateResource.cache
+C:\Users\LENOVO\Documents\GitHub\GRocket20\GroundStation\GroundStation\obj\Debug\GroundStation.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Documents\GitHub\GRocket20\GroundStation\GroundStation\obj\Debug\GroundStation.exe
+C:\Users\LENOVO\Documents\GitHub\GRocket20\GroundStation\GroundStation\obj\Debug\GroundStation.pdb
