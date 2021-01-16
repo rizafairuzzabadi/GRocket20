@@ -148,11 +148,11 @@ namespace GroundStation
             Globals.FlowArray.Add(Globals.fuel.ToString("0.00"));
 
             Dispatcher.BeginInvoke(
-                new ThreadStart(() => Temperature_Data.Text = String.Format("{0:0.##} C", a)));
+                new ThreadStart(() => Temperature_Data.Text = String.Format("{0:0.##} K", a)));
             Dispatcher.BeginInvoke(
-                new ThreadStart(() => TemperatureEnt_Data.Text = String.Format("{0:0.##} C", a2)));
+                new ThreadStart(() => TemperatureEnt_Data.Text = String.Format("{0:0.##} K", a2)));
             Dispatcher.BeginInvoke(
-                new ThreadStart(() => SpeedData.Text = String.Format("{0:0.##} kg/s", b)));
+                new ThreadStart(() => SpeedData.Text = String.Format("{0:0.##} RPM", b)));
             Dispatcher.BeginInvoke(
                 new ThreadStart(() => MotorPr_Data.Text = String.Format("{0:0.##} kPA", c)));
             Dispatcher.BeginInvoke(
@@ -166,7 +166,7 @@ namespace GroundStation
             Dispatcher.BeginInvoke(
                 new ThreadStart(() => Exit_Data.Text = String.Format("{0:0.##} kPA", c5)));
             Dispatcher.BeginInvoke(
-                new ThreadStart(() => AirFlow_Data.Text = String.Format("{0:0.##} CFM", d)));
+                new ThreadStart(() => AirFlow_Data.Text = String.Format("{0:0.##} kg/s", d)));
             Dispatcher.BeginInvoke(
                 new ThreadStart(() => FuelBar.Minimum = 0));
             Dispatcher.BeginInvoke(
@@ -206,16 +206,16 @@ namespace GroundStation
             FuelBar.Maximum = 100;
             FuelBar.Value = Globals.fuel;
 
-            Temperature_Data.Text = String.Format("{0:0.##} C", a);
-            TemperatureEnt_Data.Text = String.Format("{0:0.##} C", a2);
-            SpeedData.Text = String.Format("{0:0.##} kg/s", b);
+            Temperature_Data.Text = String.Format("{0:0.##} K", a);
+            TemperatureEnt_Data.Text = String.Format("{0:0.##} K", a2);
+            SpeedData.Text = String.Format("{0:0.##} RPM", b);
             MotorPr_Data.Text = String.Format("{0:0.##} kPA", c);
             CompPr_Data.Text = String.Format("{0:0.##} kPA", c1);
             CCE_Data.Text = String.Format("{0:0.##} kPA", c2);
             TurbinePr_Data.Text = String.Format("{0:0.##} kPA", c3);
             NozzlePr_Data.Text = String.Format("{0:0.##} kPA", c4);
             Exit_Data.Text = String.Format("{0:0.##} kPA", c5);
-            AirFlow_Data.Text = String.Format("{0:0.##} CFM", d);
+            AirFlow_Data.Text = String.Format("{0:0.##} kg/s", d);
             GBTimer.Stop();
             GBTimer.Dispose();
 
