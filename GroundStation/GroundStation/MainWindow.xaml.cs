@@ -77,13 +77,14 @@ namespace GroundStation
         public MainWindow()
         {
             InitializeComponent();
-            /*_serialPort = new SerialPort(); //For getting temperature data from Arduino
+            /*_serialPort = new SerialPort(); //For getting data from Arduino
             _serialPort.PortName = "COM4";//Set your board COM
             _serialPort.BaudRate = 9600;
             _serialPort.Open();
             while (true)
             {
                 string a = _serialPort.ReadExisting();
+                Globals.temp = a;
                 Console.WriteLine(a);
                 Thread.Sleep(200);
             }*/
@@ -112,6 +113,11 @@ namespace GroundStation
         {
             Globals.temp = GetRandomNumber(30, 1000);
             Globals.temp2 = GetRandomNumber(30, 1000);
+
+            //Conversion to Kelvin in case the input taken is C
+            Globals.temp += 273.15;
+            Globals.temp2 += 273.15;
+
             Globals.speed = GetRandomNumber(0, 1000);
             Globals.pressure_1 = GetRandomNumber(0, 700);
             Globals.pressure_2 = GetRandomNumber(0, 700);
