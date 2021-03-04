@@ -239,7 +239,7 @@ namespace GroundStation
                 using (var writer = new StreamWriter(mem))
                 using (var csvWriter = new CsvWriter(writer, System.Globalization.CultureInfo.CurrentCulture))
                 {
-                    csvWriter.Configuration.Delimiter = ";";
+                    // csvWriter.Configuration.Delimiter = ";";
                     csvWriter.WriteField("Temperature");
                     csvWriter.WriteField("Speed");
                     csvWriter.WriteField("Pressure");
@@ -271,6 +271,10 @@ namespace GroundStation
 
         }
 
+        private void Exit_Data_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
                

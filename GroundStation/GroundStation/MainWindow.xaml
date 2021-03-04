@@ -1,14 +1,18 @@
-﻿<Window x:Class="GroundStation.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GroundStation"
+        xmlns:Syncfusion="http://schemas.syncfusion.com/wpf" xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" x:Class="GroundStation.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow"
-        Height="677.1"
-        Width="999">
-    <Grid Background="#FF252525">
+        Height="1050"
+        Width="1680"
+        >
+
+
+    <Grid Background="#FF252525" Margin="0,1,0,-1">
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition Width="0*" />
@@ -19,88 +23,96 @@
         </Grid.RowDefinitions>
         <Label Content="Copyright © 2020 Gökbörü Havacılık ve Uzay Takımı"
            HorizontalAlignment="Left"
-           Margin="28,291,0,0"
+           Margin="24,489,0,0"
            VerticalAlignment="Top"
            Foreground="White"
            Grid.Row="1"
            FontFamily="Sitka Heading"
-           FontSize="16"
+           FontSize="18"
            Height="30"
-           Width="369" />
-        <Image Height="81"
-           Margin="520,16,360,0"
+           Width="425" />
+        <Image Height="111"
+           Margin="1441,24,29,0"
            VerticalAlignment="Top"
            Source="image (2).png" />
-        <Image x:Name="Heat_Copy"
-           Margin="24,62,912,186"
-           Source="image (3).png"
-           RenderTransformOrigin="0.5,0.5" />
-        <Image x:Name="Heat_Copy1"
-           Margin="24,209,917,39"
-           Source="image (1).png"
-           RenderTransformOrigin="0.5,0.5" />
         <Image x:Name="Heat_Copy2"
-           Margin="904,13,37,285"
+           Margin="75,444,1475,457"
            Source="fuel (2).png"
-           RenderTransformOrigin="0.5,0.5" Grid.Row="1" />
+           RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2" >
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
         <Label Content="Temperature"
-           Margin="79,58,801,210"
+           Margin="1422,217,99,280"
            Foreground="White"
            FontFamily="Sitka Display"
-           FontSize="16" />
+           FontSize="26" Grid.Row="1" />
         <Label Content="Pressures"
-           Margin="79,209,831,59"
+           Margin="23,171,1538,341"
            Foreground="White"
            FontFamily="Sitka Display"
-           FontSize="16"
-           RenderTransformOrigin="0.672,0.464" />
-        <Label Content="Fuel"
-           Margin="854,15,92,303"
-           Foreground="White"
-           FontFamily="Sitka Display"
-           FontSize="16"
+           FontSize="26"
            RenderTransformOrigin="0.672,0.464" Grid.Row="1" />
-        <Image x:Name="Heat_Copy3"
-           Margin="904,147,37,101"
-           Source="speed.png"
-           RenderTransformOrigin="0.5,0.5" />
-        <Label Content="Shaft Speed"
-           Margin="806,151,92,117"
+        <Label Content="Fuel"
+           Margin="109,84,1468,417"
            Foreground="White"
            FontFamily="Sitka Display"
-           FontSize="16"
+           FontSize="26"
+           RenderTransformOrigin="0.672,0.464" Grid.Row="1" />
+
+        <Label Content="Shaft Speed"
+           Margin="1431,189,98,234"
+           Foreground="White"
+           FontFamily="Sitka Display"
+           FontSize="26"
            RenderTransformOrigin="0.672,0.464" />
         <TextBox x:Name="Temperature_Data"
-             Margin="84,155,743,111"
+             Margin="1498,295,47,208"
              TextWrapping="Wrap"
              Background="{x:Null}"
              BorderThickness="0"
              Foreground="White"
-             FontSize="22"
+                 TextAlignment="Center"
+             FontSize="30"
              IsReadOnly="True"
-             FontFamily="Segoe UI Light" />
+             FontFamily="Segoe UI Light" Text="0.00 K" Grid.Row="1" />
         <TextBox x:Name="SpeedData"
-             Margin="757,179,92,82"
+             Margin="1408,61,88,453"
              TextWrapping="Wrap"
              Background="{x:Null}"
              BorderThickness="0"
              Foreground="White"
              FontSize="22"
              IsReadOnly="True"
-             TextAlignment="Right"
-             FontFamily="Segoe UI Light" />
+             TextAlignment="Center"
+             FontFamily="Segoe UI Light" Text="0.00 RPM" Grid.Row="1" />
         <Label Content="MICROJET PERFORMANCE TESTING SYSTEM"
-           Height="39"
-           Margin="594,16,10,0"
+           Height="61"
+           Margin="832,28,168,0"
            VerticalAlignment="Top"
            Foreground="White"
-           FontSize="18" FontFamily="Sitka Subheading" />
+           FontSize="32" FontFamily="Sitka Subheading" />
         <ProgressBar x:Name="FuelBar"
-                 Margin="757,45,92,285"
-                 Foreground="#FFB88E00" Grid.Row="1" />
+                 Margin="-55,235,1349,209"
+                 Foreground="#FFB88E00" RenderTransformOrigin="0.5,0.5" >
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
         <Button x:Name="TestingRand"
             Content="Start Engine"
-            Margin="815,179,37,140"
+            Margin="1411,405,35,99"
             Grid.Row="1"
             FontFamily="Rockwell"
             Click="TestingRand_Click"
@@ -109,12 +121,22 @@
                 <DropShadowEffect />
             </Button.Effect>
         </Button>
+
         <Image x:Name="AirFlow"
-           Margin="904,234,37,14"
+           Margin="262,463,1286,465"
            Source="image (4).png"
-           RenderTransformOrigin="0.5,0.5" />
+           RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2" >
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
         <TextBox x:Name="AirFlow_Data"
-             Margin="757,262,92,1"
+             Margin="258,128,1284,378"
              TextWrapping="Wrap"
              Background="{x:Null}"
              BorderThickness="0"
@@ -122,142 +144,142 @@
              FontSize="22"
              IsReadOnly="True"
              FontFamily="Segoe UI Light"
-             TextAlignment="Right" />
+             TextAlignment="Right" Grid.Row="1" />
         <Label x:Name="Air"
-           Content="Airflow"
-           Margin="832,234,92,34"
+           Content="Airflow (kg/s)"
+           Margin="244,85,1250,409"
            Foreground="White"
            FontFamily="Sitka Display"
-           FontSize="16"
-           RenderTransformOrigin="0.672,0.464" />
-        <Image Margin="335,285,332,185"
+           FontSize="26"
+           RenderTransformOrigin="0.672,0.464" Grid.Row="1" />
+        <Image Margin="629,348,584,409"
            Source="mercury.png"
            RenderTransformOrigin="0.208,0.274" Grid.RowSpan="2" />
         <Label Content="Engine Entry"
-           Margin="79,230,801,40"
+               HorizontalContentAlignment="Center"
+           Margin="24,362,1510,157"
            Foreground="White"
            FontFamily="Sitka Display"
-           FontSize="14"
-           RenderTransformOrigin="0.672,0.464" />
+           FontSize="16"
+           RenderTransformOrigin="0.672,0.464" Grid.Row="1" HorizontalAlignment="Center" Width="172" VerticalAlignment="Center" />
         <TextBox x:Name="MotorPr_Data"
-             Margin="84,253,743,13"
+             Margin="38,393,1525,126"
+                 HorizontalContentAlignment="Center"
              TextWrapping="Wrap"
              Background="{x:Null}"
              BorderThickness="0"
              Foreground="White"
-             FontSize="22"
+             FontSize="20"
              IsReadOnly="True"
-             FontFamily="Segoe UI Light" />
-        <Label Content="Compressor Entry (1)"
-           Margin="79,286,767,324"
+             FontFamily="Segoe UI Light" Grid.Row="1" Tag="asdasd" Text="0.00 kPA" SpellCheck.IsEnabled="True" Height="30" />
+        <Label Content="Comp. Entry (1)"
+               HorizontalContentAlignment="Center"
+           Margin="181,362,1316,155"
            Foreground="White"
            FontFamily="Sitka Display"
-           FontSize="14"
-           RenderTransformOrigin="0.672,0.464"
-           Grid.RowSpan="2" />
+           FontSize="16"
+           RenderTransformOrigin="0.672,0.464" Grid.Row="1" Width="175" />
         <TextBox x:Name="CompPr_Data"
-             Margin="84,12,743,304"
+             Margin="210,394,1343,125"
+             HorizontalContentAlignment="Center"
              TextWrapping="Wrap"
              Background="{x:Null}"
              BorderThickness="0"
              Foreground="White"
-             FontSize="22"
+             FontSize="20"
              IsReadOnly="True"
-             FontFamily="Segoe UI Light"
-             Grid.Row="1" />
-        <Label Content="Comp. Exit / Combustion Chamber Entry (2)"
+             FontFamily="Segoe UI Light" Grid.Row="1" Text="0.00 kPA" Height="30" />
+        <Label Content="Comp. Exit / CC Entry (2)"
            HorizontalAlignment="Left"
-           Margin="79,45,0,0"
+               HorizontalContentAlignment="Center"
+           Margin="357,362,0,0"
            VerticalAlignment="Top"
            Foreground="White"
            FontFamily="Sitka Display"
-           FontSize="14"
+           FontSize="15"
            RenderTransformOrigin="0.672,0.464"
-           Height="28"
-           Width="272"
+           Height="32"
+           Width="175"
            Grid.Row="1" />
         <TextBox x:Name="CCE_Data"
-             Margin="84,68,743,248"
+             Margin="405,395,1138,124"
              TextWrapping="Wrap"
              Background="{x:Null}"
              BorderThickness="0"
              Foreground="White"
-             FontSize="22"
+             FontSize="20"
              IsReadOnly="True"
              FontFamily="Segoe UI Light"
-             Grid.Row="1" />
-        <Label Content="Chamber Exit / Turbine Entry (3)"
-           Margin="79,102,709,218"
+             Grid.Row="1" Text="0.00 kPA" Height="30" />
+        <Label Content="Ch. Exit / Turbine Entry (3)"
+           Margin="534,362,957,155"
+               HorizontalContentAlignment="Center"
            Foreground="White"
            FontFamily="Sitka Display"
-           FontSize="14"
+           FontSize="15"
            RenderTransformOrigin="0.672,0.464"
            Grid.Row="1" />
         <TextBox x:Name="TurbinePr_Data"
-             Margin="83,125,744,0"
+             Margin="583,395,977,124"
              TextWrapping="Wrap"
              Background="{x:Null}"
              BorderThickness="0"
              Foreground="White"
-             FontSize="22"
+             FontSize="20"
              IsReadOnly="True"
              FontFamily="Segoe UI Light"
-             Grid.Row="1"
-             Height="32"
-             VerticalAlignment="Top" />
-        <Label Content="Turbine Exit / Nozzle Entry (4)"
-           Margin="79,158,0,0"
+             Grid.Row="1" Text="0.00 kPA" Height="30" />
+        <Label Content="Trb. Exit / Nozzle Entry (4)"
+           Margin="720,362,0,0"
+               HorizontalContentAlignment="Center"
            Foreground="White"
            FontFamily="Sitka Display"
-           FontSize="14"
-           RenderTransformOrigin="0.672,0.464"
+           FontSize="15"
+           RenderTransformOrigin="0.91,0.5"
            Grid.Row="1"
            HorizontalAlignment="Left"
-           Width="188"
+           Width="173"
            Height="28"
            VerticalAlignment="Top" />
         <TextBox x:Name="NozzlePr_Data"
-             Margin="82,181,0,0"
+             Margin="761,396,0,115"
              TextWrapping="Wrap"
              Background="{x:Null}"
              BorderThickness="0"
              Foreground="White"
-             FontSize="22"
+             FontSize="20"
              IsReadOnly="True"
              FontFamily="Segoe UI Light"
              Grid.Row="1"
              HorizontalAlignment="Left"
-             Width="164"
-             Height="32"
-             VerticalAlignment="Top" />
+             Width="117" Text="0.00 kPA" />
         <Label Content="Nozzle Exit (5)"
-           Margin="79,214,0,0"
+           Margin="901,361,0,0"
+               HorizontalContentAlignment="Center"
            Foreground="White"
            FontFamily="Sitka Display"
-           FontSize="14"
+           FontSize="16"
            RenderTransformOrigin="0.672,0.464"
            Grid.Row="1"
            Height="28"
            VerticalAlignment="Top"
            HorizontalAlignment="Left"
-           Width="132" />
+           Width="147" />
         <TextBox x:Name="Exit_Data"
-             Margin="82,237,0,0"
+             Margin="934,396,0,119"
              TextWrapping="Wrap"
              Background="{x:Null}"
              BorderThickness="0"
              Foreground="White"
-             FontSize="22"
+             FontSize="20"
              IsReadOnly="True"
              FontFamily="Segoe UI Light"
              Grid.Row="1"
-             Height="32"
-             VerticalAlignment="Top"
              HorizontalAlignment="Left"
-             Width="164" />
+             Width="115" Text="0.00 kPA" TextChanged="Exit_Data_TextChanged" />
         <Button x:Name="Stop"
             Content="Stop Engine"
-            Margin="815,228,37,91"
+            Margin="1411,461,35,39"
             Grid.Row="1"
             FontFamily="Rockwell"
             FontSize="14"
@@ -268,7 +290,7 @@
         </Button>
         <Button x:Name="LogData"
             Content="Log Data (to .cvs)"
-            Margin="841,281,37,38"
+            Margin="1173,458,273,39"
             Grid.Row="1"
             FontFamily="Rockwell"
             Background="#FF8F8F8F"
@@ -279,90 +301,189 @@
         </Button>
         <Rectangle Fill="#FFC3C3C3"
                HorizontalAlignment="Left"
-               Height="180"
-               Margin="377,179,0,0"
+               Height="274"
+               Margin="679,186,0,0"
                Stroke="#FF9C9C9C"
                VerticalAlignment="Top"
-               Width="1" Grid.RowSpan="2" />
+               Width="1" />
         <Rectangle Fill="#FFC3C3C3"
                HorizontalAlignment="Left"
-               Height="110"
-               Margin="425,205,0,0"
+               Height="176"
+               Margin="916,268,0,0"
                Stroke="#FF9C9C9C"
                VerticalAlignment="Top"
-               Width="1" Grid.RowSpan="2" />
-        <Rectangle Fill="#FFC3C3C3"
-               HorizontalAlignment="Left"
-               Height="119"
-               Margin="533,231,0,0"
-               Stroke="#FF9C9C9C"
-               VerticalAlignment="Top"
-               Width="1" Grid.RowSpan="2" />
-        <Rectangle Fill="#FFC3C3C3"
-               HorizontalAlignment="Left"
-               Height="91"
-               Margin="607,281,0,0"
-               Stroke="#FF9C9C9C"
-               VerticalAlignment="Top"
-               Width="1" Grid.RowSpan="2" />
+               Width="1" />
         <Label Content="Compressor Inlet (1)"
            HorizontalAlignment="Left"
-           Margin="378,170,0,0"
+           Margin="680,178,0,0"
            VerticalAlignment="Top"
            Foreground="White"
-           FontFamily="Sitka Display" />
+           FontFamily="Sitka Display" Height="35" Width="192" FontSize="16" />
         <Label Content="Compressor Outlet / Combustor Inlet (2)"
            HorizontalAlignment="Left"
-           Margin="426,197,0,0"
+           Margin="753,212,0,0"
            VerticalAlignment="Top"
            Foreground="White"
-           FontFamily="Sitka Display" />
+           FontFamily="Sitka Display" Height="32" Width="269" FontSize="16" />
         <Label Content="Combustor Outlet / Turbine Inlet (3)"
            HorizontalAlignment="Left"
-           Margin="534,223,0,0"
+           Margin="917,264,0,0"
            VerticalAlignment="Top"
            Foreground="White"
-           FontFamily="Sitka Display" />
+           FontFamily="Sitka Display" Height="28" Width="266" FontSize="16" />
         <Rectangle Fill="#FFC3C3C3"
                HorizontalAlignment="Left"
-               Height="103"
-               Margin="564,256,0,0"
+               Height="140"
+               Margin="976,320,0,0"
                Stroke="#FF9C9C9C"
                VerticalAlignment="Top"
-               Width="1" Grid.RowSpan="2" />
+               Width="1" />
         <Label Content="Turbine Outlet (4)"
            HorizontalAlignment="Left"
-           Margin="564,248,0,0"
+           Margin="976,314,0,0"
            VerticalAlignment="Top"
            Foreground="White"
-           FontFamily="Sitka Display" />
+           FontFamily="Sitka Display" Height="29" Width="136" FontSize="16" />
         <Label Content="Nozzle Stream (5)"
            HorizontalAlignment="Left"
-           Margin="607,274,0,0"
+           Margin="1020,358,0,0"
            VerticalAlignment="Top"
            Foreground="White"
-           FontFamily="Sitka Display" Grid.RowSpan="2" />
-        <Label Content="Engine Exit
-"
-           Margin="80,133,800,137"
+           FontFamily="Sitka Display" Height="27" Width="164" FontSize="16" />
+        <Label Content="Engine Exit "
+           Margin="1512,259,30,254"
            Foreground="White"
            FontFamily="Sitka Display"
-           FontSize="14"
-           RenderTransformOrigin="0.5,0.5" />
+           FontSize="20"
+           RenderTransformOrigin="0.5,0.5" Grid.Row="1" />
         <TextBox x:Name="TemperatureEnt_Data"
-             Margin="85,100,742,166"
+             Margin="1345,295,171,218"
              TextWrapping="Wrap"
              Background="{x:Null}"
              BorderThickness="0"
              Foreground="White"
-             FontSize="22"
+             FontSize="30"
+                 TextAlignment="Center"
              IsReadOnly="True"
-             FontFamily="Segoe UI Light" />
+             FontFamily="Segoe UI Light" Text="0.00 K" Grid.Row="1" />
         <Label Content="Engine Burner"
-           Margin="80,78,780,192"
+           Margin="1360,259,176,254"
            Foreground="White"
            FontFamily="Sitka Display"
-           FontSize="14"
-           RenderTransformOrigin="0.672,0.464" />
+           FontSize="20"
+           RenderTransformOrigin="0.672,0.464" Grid.Row="1" />
+        <Rectangle Fill="#FFC3C3C3"
+            HorizontalAlignment="Left"
+            Height="176"
+            Margin="751,219,0,0"
+            Stroke="#FF9C9C9C"
+            VerticalAlignment="Top"
+            Width="1" />
+
+        <Rectangle Fill="#FFC3C3C3"
+            HorizontalAlignment="Left"
+            Height="112"
+            Margin="1018,365,0,0"
+            Stroke="#FF9C9C9C"
+            VerticalAlignment="Top"
+            Width="1" Grid.RowSpan="2" />
+        <telerik:RadRadialGauge HorizontalAlignment="Left" Height="140" Margin="21,221,0,0" Grid.Row="1" VerticalAlignment="Top" Width="145" OuterBackground="{x:Null}" OuterBorderBrush="{x:Null}" InnerBorderBrush="{x:Null}" InnerBackground="{x:Null}" Foreground="{x:Null}">
+            <telerik:RadialScale x:Name="scale_Copy"
+                MajorTicks="10"  
+                MiddleTicks="2"  
+                MinorTicks="3" 
+                Min="0" 
+                Max="150" Foreground="White">
+                <telerik:RadialScale.Indicators>
+                    <telerik:Needle x:Name="needle1" Value="0" Background="White" />
+                    <telerik:Pinpoint />
+                </telerik:RadialScale.Indicators>
+            </telerik:RadialScale>
+            <telerik:RadialScale x:Name="scale_Copy1"
+                MajorTicks="10"  
+                MiddleTicks="2"  
+                MinorTicks="3" 
+                Min="0" 
+                Max="150" Foreground="White" Margin="175,-1,-175,1">
+                <telerik:RadialScale.Indicators>
+                    <telerik:Needle x:Name="needle2" Value="0" Background="White" />
+                    <telerik:Pinpoint />
+                </telerik:RadialScale.Indicators>
+            </telerik:RadialScale>
+            <telerik:RadialScale x:Name="scale_Copy2"
+                MajorTicks="10"  
+                MiddleTicks="2"  
+                MinorTicks="3"  
+                Min="0" 
+                Max="150" Foreground="White" Margin="353,-1,-353,1">
+                <telerik:RadialScale.Indicators>
+                    <telerik:Needle x:Name="needle3" Value="0" Background="White" />
+                    <telerik:Pinpoint />
+                </telerik:RadialScale.Indicators>
+            </telerik:RadialScale>
+            <telerik:RadialScale x:Name="scale_Copy3"
+                MajorTicks="10"  
+                MiddleTicks="2"  
+                MinorTicks="3" 
+                Min="0" 
+                Max="150" Foreground="White" Margin="530,-1,-530,1">
+                <telerik:RadialScale.Indicators>
+                    <telerik:Needle x:Name="needle4" Value="0" Background="White" />
+                    <telerik:Pinpoint />
+                </telerik:RadialScale.Indicators>
+            </telerik:RadialScale>
+            <telerik:RadialScale x:Name="scale_Copy4"
+                MajorTicks="10"  
+                MiddleTicks="2"  
+                MinorTicks="3" 
+                Min="0" 
+                Max="150
+                                 " Foreground="White" Margin="706,-1,-706,1">
+                <telerik:RadialScale.Indicators>
+                    <telerik:Needle x:Name="needle5" Value="0" Background="White" />
+                    <telerik:Pinpoint />
+                </telerik:RadialScale.Indicators>
+            </telerik:RadialScale>
+            <telerik:RadialScale x:Name="scale_Copy5"
+                MajorTicks="10"  
+                MiddleTicks="2"  
+                MinorTicks="3"  
+                Min="0" 
+                Max="150" Foreground="White" Margin="881,0,-881,0">
+                <telerik:RadialScale.Indicators>
+                    <telerik:Needle x:Name="needle6" Value="0" Background="White" />
+                    <telerik:Pinpoint />
+                </telerik:RadialScale.Indicators>
+            </telerik:RadialScale>
+        </telerik:RadRadialGauge>
+        <telerik:RadRadialGauge HorizontalAlignment="Left" Height="295" Margin="1350,236,0,0" VerticalAlignment="Top" Width="293" Foreground="{x:Null}" InnerBackground="{x:Null}" InnerBorderBrush="{x:Null}" OuterBackground="{x:Null}" OuterBorderBrush="{x:Null}" Grid.RowSpan="2">
+            <telerik:RadialScale Name="scale" 
+                    MajorTicks="10"  
+                    MiddleTicks="2"  
+                    MinorTicks="3" 
+                    Min="0" 
+                    Max="120000" Foreground="White" Margin="0,2,0,-2">
+                <telerik:RadialScale.Indicators>
+                    <telerik:Needle Name="needle" Value="0" Background="White" />
+                    <telerik:Pinpoint Background="#FF8F8F8F" BorderBrush="#FF8F8F8F" />
+                </telerik:RadialScale.Indicators>
+            </telerik:RadialScale>
+        </telerik:RadRadialGauge>
+        <telerik:RadVerticalDataAxis HorizontalAlignment="Left" Height="372" Maximum="10" Margin="271,56,0,0" Minimum="0" VerticalAlignment="Top" Width="47" Foreground="White" Stroke="White"/>
+        <telerik:RadVerticalDataAxis HorizontalAlignment="Left" Height="372" Maximum="10" Margin="76,60,0,0" Minimum="0" VerticalAlignment="Top" Width="52" Foreground="White" Stroke="White"/>
+        <ProgressBar x:Name="FuelBar_Copy"
+            Margin="138,232,1157,212"
+            Foreground="#FFB88E00" RenderTransformOrigin="0.5,0.5" >
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+        <Image HorizontalAlignment="Left" Height="80" Margin="1456,135,0,0" Grid.Row="1" VerticalAlignment="Top" Width="88" Source="image (3).png"/>
+
     </Grid>
 </Window>

@@ -1,0 +1,11 @@
+<FileList>
+
+<File Reference="Syncfusion.SfGauge.WPF.dll">
+	<ContainsControls>True</ContainsControls>
+	<ToolboxItems UIFramework="WPF" VSCategory="Syncfusion Controls for WPF" BlendCategory="Syncfusion Controls for WPF">
+		<Item Type="Syncfusion.UI.Xaml.Gauges.SfCircularGauge"/>
+		<Item Type="Syncfusion.UI.Xaml.Gauges.SfLinearGauge"/>
+		<Item Type="Syncfusion.UI.Xaml.Gauges.SfDigitalGauge"/>
+	</ToolboxItems>
+</File>
+</FileList>
